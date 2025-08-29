@@ -6,3 +6,4 @@ resources:
   - rhdh-conf/4-Secret.yaml
   - rhdh-conf/5-app-config-rhdh.yaml
   - rhdh-conf/6-dynamic-plugins.yaml
+  - rhdh-conf/7-backstage.yaml
