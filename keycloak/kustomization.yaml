@@ -4,4 +4,5 @@ kind: Kustomization
 resources:
   - keycloak/1-namespace.yaml
   - keycloak/2-keycloak-operator.yaml
+  - keycloak/3-secret.yaml
 ...
