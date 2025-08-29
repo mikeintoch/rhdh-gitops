@@ -7,4 +7,4 @@ resources:
   - rhdh/3-Subscription.yaml
   - rhdh/4-Secret.yaml
   - rhdh/5-app-config-rhdh.yaml
-#  - rhdh/6-backstage.yaml
+  - rhdh/6-backstage.yaml
