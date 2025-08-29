@@ -5,4 +5,4 @@ resources:
   - rhdh-conf/3-5-ServiceAccount.yaml
   - rhdh-conf/4-Secret.yaml
   - rhdh-conf/5-app-config-rhdh.yaml
-  - rhdh-conf/6-dynamic-config.yaml
+  - rhdh-conf/6-dynamic-plugins.yaml
