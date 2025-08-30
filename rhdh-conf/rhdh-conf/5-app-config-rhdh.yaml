@@ -76,3 +76,12 @@ data:
     scaffolder:
       github:
         token: ${GITHUB_TOKEN}                    
+
+    argocd:
+      appLocatorMethods:
+        - type: config
+          instances:
+            - name: default
+              url: https://openshift-gitops-server-openshift-gitops.apps.cluster-6fncd.6fncd.sandbox404.opentlc.com
+              username: admin
+              password: hXZvfd4cLeItkUTY8Jj71PnouDC5aOwM
