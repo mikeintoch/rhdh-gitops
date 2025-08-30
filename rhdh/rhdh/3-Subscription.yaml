@@ -10,10 +10,11 @@ metadata:
     olm.operatorGroup: rhdh-operator
     rhdh.openshift.io/display-name: "Red Hat Developer Hub"
 spec:
-  channel: fast
+  channel: fast-1.6.4
   installPlanApproval: Automatic
   name: rhdh
   source: redhat-operators
   sourceNamespace: openshift-marketplace
   startingCSV: rhdh-operator.v1.5.1
 ...
+
