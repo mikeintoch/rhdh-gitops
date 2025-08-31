@@ -29,10 +29,10 @@ data:
         - '''self'''
         - '''unsafe-inline'''
         - '''unsafe-eval'''
-       script-src-elem:
-       - '''self'''
-       - '''unsafe-inline'''
-       - '''unsafe-eval'''
+        script-src-elem:
+         - '''self'''
+         - '''unsafe-inline'''
+         - '''unsafe-eval'''
       reading:
         allow:
           - host: raw.githubusercontent.com
