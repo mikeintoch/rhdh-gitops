@@ -16,9 +16,6 @@ data:
       baseUrl: https://rhdh.apps.cluster-6fncd.6fncd.sandbox404.opentlc.com
       cors:
         origin: https://rhdh.apps.cluster-6fncd.6fncd.sandbox404.opentlc.com
-#      reading:
-#        allow:
-#          - host: raw.githubusercontent.com
     auth:
       environment: production
       session:
