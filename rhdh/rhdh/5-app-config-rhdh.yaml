@@ -16,6 +16,27 @@ data:
       baseUrl: https://rhdh.apps.cluster-6fncd.6fncd.sandbox404.opentlc.com
       cors:
         origin: https://rhdh.apps.cluster-6fncd.6fncd.sandbox404.opentlc.com
+      csp:
+        connect-src:
+        - '''self'''
+        - 'http:'
+        - 'https:'
+        - 'data:'
+        img-src:
+        - '''self'''
+        - 'data:'
+        script-src:
+        - '''self'''
+        - '''unsafe-inline'''
+        - '''unsafe-eval'''
+       script-src-elem:
+       - '''self'''
+       - '''unsafe-inline'''
+       - '''unsafe-eval'''
+      reading:
+        allow:
+          - host: raw.githubusercontent.com
+          - host: '*.apps.cluster-v9zsw.v9zsw.sandbox2385.opentlc.com'
     auth:
       environment: production
       session:
