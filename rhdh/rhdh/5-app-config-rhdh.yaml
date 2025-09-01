@@ -90,10 +90,7 @@ data:
               customResources:
                 - group: 'route.openshift.io'
                   apiVersion: 'v1'
-                  plural: 'routes'
-    scaffolder:
-      github:
-        token: ${GITHUB_TOKEN}                    
+                  plural: 'routes'                 
 
     argocd:
       appLocatorMethods:
