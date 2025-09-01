@@ -10,11 +10,11 @@ spec:
   database:
     enableLocalDb: true
   application:
-    dynamicPluginsConfigMapName: dynamic-plugins-rhdh
-    appConfig:
-      configMaps:
-        - name: app-config-rhdh
-      mountPath: /opt/app-root/src
+    #dynamicPluginsConfigMapName: dynamic-plugins-rhdh
+    #appConfig:
+      #configMaps:
+        #- name: app-config-rhdh
+      #mountPath: /opt/app-root/src
     extraEnvs:
       envs:
         - name: NODE_TLS_REJECT_UNAUTHORIZED
