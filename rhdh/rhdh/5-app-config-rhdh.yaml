@@ -8,35 +8,17 @@ data:
   app-config.yaml: |
     app:
       title: Red Hat Developer Hub
-      baseUrl: https://rhdh.apps.cluster-6fncd.6fncd.sandbox404.opentlc.com
+      baseUrl: https://rhdh.apps.cluster-<GUID>.dynamic.redhatworkshops.io
     backend:
       auth:
         keys:
           - secret: ${BACKEND_SECRET}
-      baseUrl: https://rhdh.apps.cluster-6fncd.6fncd.sandbox404.opentlc.com
+      baseUrl: https://rhdh.apps.cluster-<GUID>.dynamic.redhatworkshops.io
       cors:
-        origin: https://rhdh.apps.cluster-6fncd.6fncd.sandbox404.opentlc.com
-      csp:
-        connect-src:
-        - '''self'''
-        - 'http:'
-        - 'https:'
-        - 'data:'
-        img-src:
-        - '''self'''
-        - 'data:'
-        script-src:
-        - '''self'''
-        - '''unsafe-inline'''
-        - '''unsafe-eval'''
-        script-src-elem:
-         - '''self'''
-         - '''unsafe-inline'''
-         - '''unsafe-eval'''
+        origin: https://rhdh.apps.cluster-<GUID>.dynamic.redhatworkshops.io
       reading:
         allow:
           - host: raw.githubusercontent.com
-          - host: github.com
     auth:
       environment: production
       session:
@@ -47,7 +29,7 @@ data:
             metadataUrl: "https://keycloak-rhdh-operator.apps.cluster-6fncd.6fncd.sandbox404.opentlc.com/realms/rhdh"
             clientId: rhdh
             clientSecret: developer-hub-secret
-            callbackUrl: https://rhdh.apps.cluster-6fncd.6fncd.sandbox404.opentlc.com/api/auth/oidc/handler/frame
+            callbackUrl: https://keycloak-rhdh-operator.apps.cluster-6fncd.6fncd.sandbox404.opentlc.com/api/auth/oidc/handler/frame
             prompt: login
             signIn:
               resolvers:
@@ -72,31 +54,3 @@ data:
               resolvers:
                 - resolver: emailMatchingUserEntityProfileEmail
                   dangerouslyAllowSignInWithoutUserInCatalog: true
-    integrations:
-      github:
-        - host: github.com
-          token: ${GITHUB_TOKEN}
-    kubernetes:
-      serviceLocatorMethod:
-        type: 'multiTenant'
-      clusterLocatorMethods:
-        - type: config
-          clusters:
-            - name: openshift-cluster
-              url: https://api.cluster-6fncd.6fncd.sandbox404.opentlc.com:6443
-              authProvider: serviceAccount
-              skipTLSVerify: true
-              serviceAccountToken: ${K8S_SA_TOKEN}
-              customResources:
-                - group: 'route.openshift.io'
-                  apiVersion: 'v1'
-                  plural: 'routes'                 
-
-    argocd:
-      appLocatorMethods:
-        - type: config
-          instances:
-            - name: default
-              url: https://openshift-gitops-server-openshift-gitops.apps.cluster-6fncd.6fncd.sandbox404.opentlc.com
-              username: admin
-              password: hXZvfd4cLeItkUTY8Jj71PnouDC5aOwM
