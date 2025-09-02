@@ -36,7 +36,7 @@ data:
       reading:
         allow:
           - host: raw.githubusercontent.com
-          - host: '*.apps.cluster-v9zsw.v9zsw.sandbox2385.opentlc.com'
+          - host: github.com
     auth:
       environment: production
       session:
