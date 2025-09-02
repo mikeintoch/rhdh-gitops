@@ -8,17 +8,18 @@ data:
   app-config.yaml: |
     app:
       title: Red Hat Developer Hub
-      baseUrl: https://rhdh.apps.cluster-<GUID>.dynamic.redhatworkshops.io
+      baseUrl: https://rhdh.apps.cluster-6fncd.6fncd.sandbox404.opentlc.com/
     backend:
       auth:
         keys:
           - secret: ${BACKEND_SECRET}
-      baseUrl: https://rhdh.apps.cluster-<GUID>.dynamic.redhatworkshops.io
+      baseUrl: https://rhdh.apps.cluster-6fncd.6fncd.sandbox404.opentlc.com/
       cors:
-        origin: https://rhdh.apps.cluster-<GUID>.dynamic.redhatworkshops.io
+        origin: https://rhdh.apps.cluster-6fncd.6fncd.sandbox404.opentlc.com/
       reading:
         allow:
           - host: raw.githubusercontent.com
+          - host: github.com
     auth:
       environment: production
       session:
