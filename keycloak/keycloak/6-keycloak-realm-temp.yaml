@@ -11,7 +11,6 @@ spec:
     realm: rhdh
     displayName: "RHDH Realm"
     enabled: true
-    browserFlow: browser
     identityProviders:
       - alias: github
         displayName: "GitHub"
@@ -48,3 +47,39 @@ spec:
         serviceAccountsEnabled: false
         authorizationServicesEnabled: false
 ...
+
+
+apiVersion: keycloak.org/v1alpha1
+kind: KeycloakClient
+metadata:
+  name: backstage
+  namespace: rhsso
+  finalizers:
+    - client.cleanup
+  labels:
+    app: backstage
+spec:
+  client:
+    clientAuthenticatorType: client-secret
+    redirectUris:
+      - 'https://backstage-backstage.apps.cluster-db5dk.db5dk.sandbox2071.opentlc.com/oauth2/callback'
+    serviceAccountsEnabled: true
+    clientId: backstage
+    defaultClientScopes:
+      - profile
+      - email
+      - roles
+    implicitFlowEnabled: false
+    publicClient: false
+    standardFlowEnabled: true
+    id: 773ab2fe-fa15-4f35-a85a-2e8117178c2c
+    directAccessGrantsEnabled: true
+  realmSelector:
+    matchLabels:
+      app: backstage
+  scopeMappings: {}
+  serviceAccountClientRoles:
+    realm-management:
+      - query-groups
+      - query-users
+      - view-users

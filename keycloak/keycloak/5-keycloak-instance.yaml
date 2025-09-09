@@ -3,7 +3,7 @@ apiVersion: k8s.keycloak.org/v2alpha1
 kind: Keycloak
 metadata:
   name: demo-keycloak-instance
-  namespace: demo-project
+  namespace: rhbk
   labels:
     app: sso
 spec:
@@ -12,8 +12,8 @@ spec:
     httpPort: 8090
     tlsSecret: my-tls-secret
   hostname:
-    adminUrl: 'https://keycloak-rhdh-operator.apps.cluster-6fncd.6fncd.sandbox404.opentlc.com'
-    hostname: keycloak-rhdh-operator.apps.cluster-6fncd.6fncd.sandbox404.opentlc.com
+    adminUrl: 'https://keycloak-rhdh-operator.apps.cluster-9gppl.9gppl.sandbox2540.opentlc.com' #change to your route URL
+    hostname: keycloak-rhdh-operator.apps.cluster-9gppl.9gppl.sandbox2540.opentlc.com
   instances: 1
   db:
     vendor: postgres
