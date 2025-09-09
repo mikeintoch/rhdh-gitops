@@ -1,9 +1,0 @@
----
-apiVersion: kustomize.config.k8s.io/v1beta1
-kind: Kustomization
-resources:
-  - gitea/1-gitea-persistent-volume.yaml
-  - gitea/2-gitea-postgres.yaml
-  - gitea/3-gitea-deployment.yaml
-  - gitea/4-gitea-service.yaml
-  - gitea/5-gitea-route.yaml
