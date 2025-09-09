@@ -7,6 +7,6 @@ resources:
   - keycloak/3-secret.yaml
   - keycloak/4-Keycloak-postgresSQL.yaml
   - keycloak/5-keycloak-instance.yaml
-  #- keycloak/6-keycloak-rhdh-realm.yaml
+  - keycloak/6-keycloak-rhdh-realm.yaml
 
 ...
