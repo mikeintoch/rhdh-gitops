@@ -6,4 +6,3 @@ resources:
   - gitlab/2-OperatorGroup.yaml
   - gitlab/3-Subscription.yaml
   - gitlab/4-gitlab.yaml
-  - gitlab/5-routes.yaml
