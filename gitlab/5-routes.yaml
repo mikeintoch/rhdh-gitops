@@ -1,0 +1,20 @@
+--- 
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: gitlab-webservice-default
+  namespace: gitlab-system
+spec:
+  path: /
+  to:
+    name: gitlab-webservice-default
+    weight: 100
+    kind: Service
+  host: gitlab.apps.cluster-9gppl.9gppl.sandbox2540.opentlc.com # Replace with your own domain name
+  tls:
+    insecureEdgeTerminationPolicy: Redirect
+    termination: edge
+  port:
+    targetPort: http-workhorse
+  alternateBackends: []
+...

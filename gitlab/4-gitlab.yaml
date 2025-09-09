@@ -1,0 +1,63 @@
+---
+kind: GitLab
+apiVersion: apps.gitlab.com/v1beta1
+metadata:
+  name: gitlab
+  namespace: gitlab-system
+spec:
+  chart:
+    values:
+      edition: ce
+      prometheus:
+        install: false
+      certmanager:
+        install: false
+      gitlab:
+        gitlab-shell:
+          enabled: false
+        sidekiq:
+          resources:
+            requests:
+              cpu: 500m
+              memory: 1000M
+        webservice:
+          resources:
+            requests:
+              cpu: 500m
+              memory: 1500M
+      global:
+        hosts: # Replace these values woth your own domain names
+          domain: apps.cluster-9gppl.9gppl.sandbox2540.opentlc.com
+          externalUrl: https://gitlab.apps.cluster-9gppl.9gppl.sandbox2540.opentlc.com
+          https: true
+          gitlab: # Explicitly define the main GitLab web UI hostname
+            name: gitlab.cluster-9gppl.9gppl.sandbox2540.opentlc.com
+          registry: # Explicitly define the Container Registry hostname
+            name: registry.cluster-9gppl.9gppl.sandbox2540.opentlc.com
+          minio: # Explicitly define the MinIO hostname
+            name: minio.cluster-9gppl.9gppl.sandbox2540.opentlc.com
+          kas: # Explicitly define the KAS hostname if you use it
+            name: kas.cluster-9gppl.9gppl.sandbox2540.opentlc.com
+        ingress:
+          configureCertmanager: false
+          tls:
+            secretName: null
+          class: none
+          annotations:
+            route.openshift.io/termination: "edge"
+      installCertmanager: false
+      minio:
+        resources:
+          requests:
+            cpu: 100m
+      nginx-ingress:
+        enabled: false
+      postgresql:
+        primary:
+          extendedConfiguration: max_connections = 200
+      redis:
+        resources:
+          requests:
+            cpu: 100m
+    version: 9.3.1
+...
