@@ -17,12 +17,12 @@ spec:
         trustEmail: true
         firstBrokerLoginFlowAlias: first broker login
         config:
-          authorizationUrl: 'https://gitlab.apps.cluster-9gppl.9gppl.sandbox2540.opentlc.com/oauth/authorize'
+          authorizationUrl: 'https://gitlab.apps.cluster-9gppl.9gppl.sandbox2540.opentlc.com/oauth/authorize' #Replace with your GitLab URL
           clientAuthMethod: client_secret_basic
-          clientId: 440b385244b0776cd2e95c6acec50bca2ed961276f137f486e3c4970a67a68e2
-          clientSecret: gloas-gloas-cbc3d4d5ce5539e762b9064ed5fa7fa79a1dfb3ed99ff93cfbcd90910ebcc1c2
+          clientId: 440b385244b0776cd2e95c6acec50bca2ed961276f137f486e3c4970a67a68e2 # Replace with gitlab app created
+          clientSecret: gloas-gloas-cbc3d4d5ce5539e762b9064ed5fa7fa79a1dfb3ed99ff93cfbcd90910ebcc1c2 # replace with gitlan app created
           syncMode: IMPORT
-          tokenUrl: 'https://gitlab.apps.cluster-9gppl.9gppl.sandbox2540.opentlc.com/oauth/token'
+          tokenUrl: 'https://gitlab.apps.cluster-9gppl.9gppl.sandbox2540.opentlc.com/oauth/token' #Replace with your GitLab URL
           useJwksUrl: 'true'
         providerId: oidc
     clients:
