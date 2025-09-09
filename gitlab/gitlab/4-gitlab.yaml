@@ -31,13 +31,13 @@ spec:
           externalUrl: https://gitlab.apps.cluster-9gppl.9gppl.sandbox2540.opentlc.com
           https: true
           gitlab: # Explicitly define the main GitLab web UI hostname
-            name: gitlab.cluster-9gppl.9gppl.sandbox2540.opentlc.com
+            name: gitlab.apps.cluster-9gppl.9gppl.sandbox2540.opentlc.com
           registry: # Explicitly define the Container Registry hostname
-            name: registry.cluster-9gppl.9gppl.sandbox2540.opentlc.com
+            name: registry.apps.cluster-9gppl.9gppl.sandbox2540.opentlc.com
           minio: # Explicitly define the MinIO hostname
-            name: minio.cluster-9gppl.9gppl.sandbox2540.opentlc.com
+            name: minio.apps.cluster-9gppl.9gppl.sandbox2540.opentlc.com
           kas: # Explicitly define the KAS hostname if you use it
-            name: kas.cluster-9gppl.9gppl.sandbox2540.opentlc.com
+            name: kas.apps.cluster-9gppl.9gppl.sandbox2540.opentlc.com
         ingress:
           configureCertmanager: false
           tls:
