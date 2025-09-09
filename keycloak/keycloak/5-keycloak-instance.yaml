@@ -6,6 +6,8 @@ metadata:
   namespace: rhbk
   labels:
     app: sso
+  annotations:
+    argocd.argoproj.io/sync-wave: "2"
 spec:
   http:
     httpEnabled: true

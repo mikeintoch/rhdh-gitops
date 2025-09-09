@@ -6,6 +6,7 @@ metadata:
   labels:
     kubernetes.io/metadata.name: rhbk
   annotations:
+    argocd.argoproj.io/sync-wave: "1"
     openshift.io/display-name: RHDH demo project
 ---
 apiVersion: operators.coreos.com/v1
@@ -13,6 +14,8 @@ kind: OperatorGroup
 metadata:
   name: rhbk-group
   namespace: rhbk
+  annotations:
+    argocd.argoproj.io/sync-wave: "1"
 spec:
   targetNamespaces:
     - rhbk
