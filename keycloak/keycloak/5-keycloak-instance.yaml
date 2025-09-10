@@ -12,7 +12,7 @@ spec:
   http:
     httpEnabled: true
     httpPort: 8090
-    tlsSecret: my-tls-secret
+    tlsSecret: keycloak-certificate 
   hostname:
     adminUrl: 'https://keycloak-rhdh-operator.apps.cluster-9gppl.9gppl.sandbox2540.opentlc.com' #change to your route URL
     hostname: keycloak-rhdh-operator.apps.cluster-9gppl.9gppl.sandbox2540.opentlc.com
