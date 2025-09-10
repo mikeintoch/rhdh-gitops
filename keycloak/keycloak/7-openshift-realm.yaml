@@ -13,7 +13,7 @@ spec:
     clients:
       - clientAuthenticatorType: client-secret
         redirectUris:
-          - "https://oauth-openshift.apps.cluster-9gppl.9gppl.sandbox2540.opentlc.com/oauth2callback/rhsso"
+          - "https://oauth-openshift.apps.cluster-9gppl.9gppl.sandbox2540.opentlc.com/oauth2callback/*"
         serviceAccountsEnabled: true
         clientId: idp-4-ocp
         defaultClientScopes:
