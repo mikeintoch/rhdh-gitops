@@ -1,0 +1,23 @@
+apiVersion: config.openshift.io/v1
+kind: OAuth
+metadata:
+  creationTimestamp: '2025-09-08T10:51:04Z'
+  name: cluster
+spec:
+  identityProviders:
+    - mappingMethod: claim
+      name: rhsso
+      openID:
+        claims:
+          email:
+            - email
+          name:
+            - name
+          preferredUsername:
+            - preferred_username
+        clientID: idp-4-ocp
+        clientSecret:
+          name: console-secret
+        extraScopes: []
+        issuer: 'https://keycloak-rhdh-operator.apps.cluster-9gppl.9gppl.sandbox2540.opentlc.com/realms/openshift'
+      type: OpenID
