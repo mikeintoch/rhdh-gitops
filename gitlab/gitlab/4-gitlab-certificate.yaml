@@ -1,0 +1,19 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: gitlab-certificate
+  namespace: gitlab-system
+spec:
+  dnsNames:
+    - apps.cluster-2pjhf.2pjhf.sandbox5515.opentlc.com  
+    - '*.apps.cluster-2pjhf.2pjhf.sandbox5515.opentlc.com'
+  duration: 2160h0m0s
+  issuerRef:
+    kind: ClusterIssuer
+    name: zerossl-production-ec2
+    group: cert-manager.io
+  privateKey:
+    algorithm: RSA
+    encoding: PKCS1
+    rotationPolicy: Always
+  secretName: gitlab-certificate  
